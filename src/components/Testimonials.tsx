@@ -4,7 +4,7 @@ const testimonials = [
     role: "Directrice RH",
     company: "TechStart",
     avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b5c5?w=150&h=150&fit=crop&crop=face",
-    content: "PuzzleFlow a révolutionné notre gestion des demandes RH. Les validations de congés qui prenaient 3 jours se font maintenant en quelques heures."
+    content: "Puzzle-Flow a révolutionné notre gestion des demandes RH. Les validations de congés qui prenaient 3 jours se font maintenant en quelques heures."
   },
   {
     name: "Thomas Martin",
@@ -32,7 +32,7 @@ const testimonials = [
     role: "Directrice Marketing",
     company: "CloudNine",
     avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
-    content: "Nos campagnes marketing sont maintenant approuvées en temps record. PuzzleFlow a simplifié tous nos processus créatifs."
+    content: "Nos campagnes marketing sont maintenant approuvées en temps record. Puzzle-Flow a simplifié tous nos processus créatifs."
   },
   {
     name: "Jean-Paul Kouassi",
@@ -53,7 +53,7 @@ function Testimonials() {
           Ce que nos clients <span className="bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">disent de nous</span>
         </h2>
         <p className="text-lg text-gray-600 font-medium text-center max-w-3xl mx-auto mb-16 drop-shadow-lg">
-          Découvrez comment PuzzleFlow aide des centaines d'entreprises à optimiser leurs workflows.
+          Découvrez comment Puzzle-Flow aide des centaines d'entreprises à optimiser leurs workflows.
         </p>
 
         {/* Carrousel infini */}

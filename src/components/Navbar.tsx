@@ -15,7 +15,7 @@ function Navbar() {
             </defs>
           </svg>
           <span className="text-2xl font-bold bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">
-            PuzzleFlow
+            Puzzle-Flow
           </span>
         </a>
 

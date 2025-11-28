@@ -22,7 +22,9 @@ function Hero() {
           transition={{ duration: 0.6 }}
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500/10 to-purple-600/10 border border-indigo-500/20 rounded-full px-4 py-2 text-sm font-medium text-indigo-600 mb-6">
-            <span className="text-base">✨</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-indigo-600">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
             <span>Nouvelle fonctionnalité: Workflows IA</span>
           </div>
 
@@ -32,7 +34,7 @@ function Hero() {
           </h1>
 
           <p className="text-xl text-gray-600 leading-relaxed mb-10 max-w-xl">
-            PuzzleFlow est la plateforme SaaS qui permet d'optimiser et automatiser vos workflows internes.
+            Puzzle-Flow est la plateforme SaaS qui permet d'optimiser et automatiser vos workflows internes.
             Chaque demande, validation ou projet devient une "pièce du puzzle" que vous pouvez suivre en temps réel.
           </p>
 
@@ -84,7 +86,7 @@ function Hero() {
                 <span className="w-3 h-3 bg-yellow-500 rounded-full"></span>
                 <span className="w-3 h-3 bg-green-500 rounded-full"></span>
               </div>
-              <span className="text-sm text-gray-500">Dashboard PuzzleFlow</span>
+              <span className="text-sm text-gray-500">Dashboard Puzzle-Flow</span>
             </div>
 
             {/* Dashboard Content */}
@@ -129,7 +131,12 @@ function Hero() {
             animate={{ y: [-5, 5, -5] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
           >
-            <div className="text-xl">🔔</div>
+            <div className="text-indigo-600">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              </svg>
+            </div>
             <span>3 nouvelles validations</span>
           </motion.div>
 
@@ -138,7 +145,11 @@ function Hero() {
             animate={{ y: [-5, 5, -5] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
           >
-            <div className="text-xl">✅</div>
+            <div className="text-green-600">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
             <span>Workflow terminé</span>
           </motion.div>
         </motion.div>

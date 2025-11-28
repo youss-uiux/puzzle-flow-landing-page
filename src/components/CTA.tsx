@@ -17,7 +17,7 @@ function CTA() {
               Prêt à optimiser vos workflows ?
             </h2>
             <p className="text-lg text-white/90 leading-relaxed mb-8 lg:text-lg md:text-base">
-              Rejoignez plus de 500 entreprises qui utilisent PuzzleFlow pour automatiser leurs processus.
+              Rejoignez plus de 500 entreprises qui utilisent Puzzle-Flow pour automatiser leurs processus.
               Commencez votre essai gratuit de 14 jours, sans carte de crédit.
             </p>
             <div className="flex gap-4 lg:flex-row sm:flex-col">
