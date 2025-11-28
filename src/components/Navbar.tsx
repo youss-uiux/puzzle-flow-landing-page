@@ -1,6 +1,6 @@
 function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-gray-100 py-4">
+    <nav className="fixed top-0 left-0 right-0 z-50  backdrop-blur-lg border-b border-white/10 py-4">
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2.5">
           <svg className="w-10 h-10" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,14 +20,14 @@ function Navbar() {
         </a>
 
         <ul className="hidden lg:flex items-center gap-8">
-          <li><a href="#features" className="font-medium text-gray-600 hover:text-indigo-600 transition-colors">Fonctionnalités</a></li>
-          <li><a href="#how-it-works" className="font-medium text-gray-600 hover:text-indigo-600 transition-colors">Comment ça marche</a></li>
-          <li><a href="#pricing" className="font-medium text-gray-600 hover:text-indigo-600 transition-colors">Tarifs</a></li>
-          <li><a href="#testimonials" className="font-medium text-gray-600 hover:text-indigo-600 transition-colors">Témoignages</a></li>
+          <li><a href="#features" className="font-medium text-gray-900 hover:text-indigo-400 transition-colors">Fonctionnalités</a></li>
+          <li><a href="#how-it-works" className="font-medium text-gray-900 hover:text-indigo-400 transition-colors">Comment ça marche</a></li>
+          <li><a href="#pricing" className="font-medium text-gray-900 hover:text-indigo-400 transition-colors">Tarifs</a></li>
+          <li><a href="#testimonials" className="font-medium text-gray-900 hover:text-indigo-400 transition-colors">Témoignages</a></li>
         </ul>
 
         <div className="flex items-center gap-5">
-          <a href="#" className="hidden md:block font-medium text-gray-600 hover:text-indigo-600 transition-colors">
+          <a href="#" className="hidden md:block font-medium text-gray-900 hover:text-indigo-400 transition-colors">
             Connexion
           </a>
           <a href="#" className="inline-flex items-center justify-center gap-2 px-6 py-3 md:px-6 md:py-3 sm:px-5 sm:py-2.5 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-lg text-base md:text-base sm:text-sm font-semibold transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl">

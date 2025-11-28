@@ -10,6 +10,24 @@
   .bg-gradient-radial {
     background: radial-gradient(var(--tw-gradient-stops));
   }
+
+  /* Animation pour le carrousel infini */
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
+  }
+
+  .animate-scroll:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @layer base {

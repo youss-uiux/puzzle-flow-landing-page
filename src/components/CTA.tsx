@@ -2,8 +2,10 @@ import { motion } from 'framer-motion';
 
 function CTA() {
   return (
-    <section className="bg-gray-50 py-24">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="bg-transparent py-24 relative">
+      {/* Blur subtil pour distinguer la CTA tout en laissant voir l'Orb */}
+      <div className="absolute inset-0 backdrop-blur-lg"></div>
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.div
           className="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-3xl p-20 relative overflow-hidden lg:p-20 md:p-16 sm:p-10"
           initial={{ opacity: 0, y: 20 }}

@@ -23,12 +23,14 @@ const steps = [
 
 function HowItWorks() {
   return (
-    <section className="py-24 bg-white" id="how-it-works">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl font-extrabold text-center mb-4 text-gray-900">
+    <section className="py-24 bg-transparent relative" id="how-it-works">
+      {/* Blur subtil de l'arrière-plan pour laisser voir l'Orb tout en gardant la lisibilité */}
+      <div className="absolute inset-0 backdrop-blur-lg"></div>
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <h2 className="text-4xl font-extrabold text-center mb-4 text-gray-900 drop-shadow-lg">
           Comment ça <span className="bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">marche ?</span>
         </h2>
-        <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-16">
+        <p className="text-lg text-gray-600 font-medium text-center max-w-3xl mx-auto mb-16 drop-shadow-lg">
           En seulement 4 étapes, transformez vos processus manuels en workflows automatisés et efficaces.
         </p>
 

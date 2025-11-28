@@ -1,7 +1,9 @@
 function Footer() {
   return (
-    <footer className="bg-gray-900 pt-20 pb-10 text-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <footer className="bg-slate-900/80 backdrop-blur-lg pt-20 pb-10 text-white relative">
+      {/* Blur subtil pour laisser voir l'Orb tout en gardant la lisibilité */}
+      <div className="absolute inset-0 backdrop-blur-sm"></div>
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-16">
           {/* Brand Section */}
           <div className="lg:col-span-2 md:col-span-2 text-center md:text-left">
@@ -56,39 +58,39 @@ function Footer() {
           <div className="text-center lg:text-left">
             <h4 className="text-sm font-semibold mb-5 text-white">Ressources</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-sm text-white/60 hover:text-white transition-colors">Documentation</a></li>
-              <li><a href="#" className="text-sm text-white/60 hover:text-white transition-colors">API</a></li>
-              <li><a href="#" className="text-sm text-white/60 hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#" className="text-sm text-white/60 hover:text-white transition-colors">Guides</a></li>
-              <li><a href="#" className="text-sm text-white/60 hover:text-white transition-colors">Webinaires</a></li>
+              <li><a href="#" className="text-sm text-gray-600 hover:text-white transition-colors">Documentation</a></li>
+              <li><a href="#" className="text-sm text-gray-600 hover:text-white transition-colors">API</a></li>
+              <li><a href="#" className="text-sm text-gray-600 hover:text-white transition-colors">Blog</a></li>
+              <li><a href="#" className="text-sm text-gray-600 hover:text-white transition-colors">Guides</a></li>
+              <li><a href="#" className="text-sm text-gray-600 hover:text-white transition-colors">Webinaires</a></li>
             </ul>
           </div>
 
           <div className="text-center lg:text-left">
             <h4 className="text-sm font-semibold mb-5 text-white">Entreprise</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-sm text-white/60 hover:text-white transition-colors">À propos</a></li>
-              <li><a href="#" className="text-sm text-white/60 hover:text-white transition-colors">Carrières</a></li>
-              <li><a href="#" className="text-sm text-white/60 hover:text-white transition-colors">Contact</a></li>
-              <li><a href="#" className="text-sm text-white/60 hover:text-white transition-colors">Partenaires</a></li>
-              <li><a href="#" className="text-sm text-white/60 hover:text-white transition-colors">Presse</a></li>
+              <li><a href="#" className="text-sm text-gray-600 hover:text-white transition-colors">À propos</a></li>
+              <li><a href="#" className="text-sm text-gray-600 hover:text-white transition-colors">Carrières</a></li>
+              <li><a href="#" className="text-sm text-gray-600 hover:text-white transition-colors">Contact</a></li>
+              <li><a href="#" className="text-sm text-gray-600 hover:text-white transition-colors">Partenaires</a></li>
+              <li><a href="#" className="text-sm text-gray-600 hover:text-white transition-colors">Presse</a></li>
             </ul>
           </div>
 
           <div className="text-center lg:text-left">
             <h4 className="text-sm font-semibold mb-5 text-white">Légal</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-sm text-white/60 hover:text-white transition-colors">Confidentialité</a></li>
-              <li><a href="#" className="text-sm text-white/60 hover:text-white transition-colors">CGU</a></li>
-              <li><a href="#" className="text-sm text-white/60 hover:text-white transition-colors">Sécurité</a></li>
-              <li><a href="#" className="text-sm text-white/60 hover:text-white transition-colors">RGPD</a></li>
+              <li><a href="#" className="text-sm text-gray-600 hover:text-white transition-colors">Confidentialité</a></li>
+              <li><a href="#" className="text-sm text-gray-600 hover:text-white transition-colors">CGU</a></li>
+              <li><a href="#" className="text-sm text-gray-600 hover:text-white transition-colors">Sécurité</a></li>
+              <li><a href="#" className="text-sm text-gray-600 hover:text-white transition-colors">RGPD</a></li>
             </ul>
           </div>
         </div>
 
         <div className="flex flex-col sm:flex-row justify-between items-center pt-10 border-t border-white/10 gap-3">
-          <p className="text-sm text-white/50">&copy; 2024 PuzzleFlow. Tous droits réservés.</p>
-          <p className="text-sm text-white/50 flex items-center gap-1">Fait avec ❤️ en France</p>
+          <p className="text-sm text-gray-600">&copy; 2025 PuzzleFlow. Tous droits réservés.</p>
+          <p className="text-sm text-gray-600 flex items-center gap-1">Fait avec ❤️ au Niger</p>
         </div>
       </div>
     </footer>

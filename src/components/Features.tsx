@@ -65,12 +65,14 @@ const features = [
 
 function Features() {
   return (
-    <section className="py-24 bg-gray-50" id="features">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl font-extrabold text-center mb-4 text-gray-900">
+    <section className="py-24 bg-transparent relative" id="features">
+      {/* Blur plus subtil de l'arrière-plan pour laisser voir l'Orb tout en gardant la lisibilité */}
+      <div className="absolute inset-0 backdrop-blur-lg"></div>
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <h2 className="text-4xl font-extrabold text-center mb-4 text-gray-900 drop-shadow-lg">
           Tout ce dont vous avez besoin pour <span className="bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">maîtriser vos workflows</span>
         </h2>
-        <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-16">
+        <p className="text-lg text-gray-600 font-medium text-center max-w-3xl mx-auto mb-16 drop-shadow-lg">
           Des fonctionnalités puissantes conçues pour simplifier vos processus internes et améliorer la collaboration de votre équipe.
         </p>
 
@@ -78,9 +80,9 @@ function Features() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-3xl border border-gray-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-indigo-200 group"
+              className="bg-white p-8 rounded-3xl border border-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-indigo-400 hover:bg-gray-50 group"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-2xl text-indigo-600 mb-5 group-hover:scale-110 transition-transform">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl text-white mb-5 group-hover:scale-110 transition-transform shadow-lg">
                 {feature.icon}
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>

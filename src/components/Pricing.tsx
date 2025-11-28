@@ -1,13 +1,13 @@
 const plans = [
   {
-    name: "Starter",
-    price: "29",
+    name: "Débutant",
+    price: "19 000",
     description: "Pour les petites équipes qui démarrent",
     features: [
       "Jusqu'à 5 utilisateurs",
       "10 workflows actifs",
-      "Notifications email",
-      "Dashboard basique",
+      "Notifications par email",
+      "Tableau de bord basique",
       "Support par email"
     ],
     popular: false,
@@ -15,32 +15,32 @@ const plans = [
   },
   {
     name: "Business",
-    price: "79",
+    price: "52 000",
     description: "Pour les équipes en croissance",
     features: [
       "Jusqu'à 25 utilisateurs",
       "Workflows illimités",
       "Notifications multi-canaux",
-      "Dashboard avancé",
+      "Tableau de bord avancé",
       "Intégrations (Slack, Teams)",
-      "Rapports et analytics",
+      "Rapports et analyses",
       "Support prioritaire"
     ],
     popular: true,
     cta: "Essai gratuit"
   },
   {
-    name: "Enterprise",
+    name: "Entreprise",
     price: "Sur mesure",
     description: "Pour les grandes organisations",
     features: [
       "Utilisateurs illimités",
       "Workflows illimités",
-      "SSO & SAML",
+      "SSO et SAML",
       "API complète",
-      "Audit trail avancé",
+      "Journal d'audit avancé",
       "SLA garanti",
-      "Account manager dédié",
+      "Gestionnaire de compte dédié",
       "Formation sur site"
     ],
     popular: false,
@@ -50,12 +50,14 @@ const plans = [
 
 function Pricing() {
   return (
-    <section className="py-24 bg-gray-50" id="pricing">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl font-extrabold text-center mb-4 text-gray-900">
+    <section className="py-24 bg-transparent relative" id="pricing">
+      {/* Blur subtil de l'arrière-plan pour laisser voir l'Orb tout en gardant la lisibilité */}
+      <div className="absolute inset-0 backdrop-blur-lg"></div>
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <h2 className="text-4xl font-extrabold text-center mb-4 text-gray-900 drop-shadow-lg">
           Des tarifs <span className="bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">simples et transparents</span>
         </h2>
-        <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-16">
+        <p className="text-lg text-gray-600 font-medium text-center max-w-3xl mx-auto mb-16 drop-shadow-lg">
           Choisissez le plan adapté à vos besoins. Tous les plans incluent un essai gratuit de 14 jours.
         </p>
 
@@ -66,7 +68,7 @@ function Pricing() {
               className={`bg-white rounded-3xl relative flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
                 plan.popular 
                   ? 'border-2 border-indigo-500 shadow-xl lg:order-none -order-1' 
-                  : 'border border-gray-100 p-10'
+                  : 'border border-gray-200 p-10'
               }`}
               style={{ padding: plan.popular ? '40px 32px' : '40px 32px' }}
             >
@@ -81,9 +83,8 @@ function Pricing() {
               <div className="mb-2">
                 {plan.price !== "Sur mesure" ? (
                   <div className="flex items-baseline">
-                    <span className="text-2xl font-semibold text-gray-900">€</span>
                     <span className="text-5xl font-bold text-gray-900 leading-none">{plan.price}</span>
-                    <span className="text-base text-gray-500 ml-1">/mois</span>
+                    <span className="text-base text-gray-600 ml-2">FCFA/mois</span>
                   </div>
                 ) : (
                   <span className="text-3xl font-bold text-gray-900">{plan.price}</span>
@@ -94,7 +95,7 @@ function Pricing() {
 
               <ul className="space-y-2.5 mb-8 flex-1">
                 {plan.features.map((feature, i) => (
-                  <li key={i} className="flex items-center gap-3 text-sm text-gray-700">
+                  <li key={i} className="flex items-center gap-3 text-sm text-gray-600">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-green-500 flex-shrink-0">
                       <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
