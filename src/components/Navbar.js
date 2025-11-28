@@ -37,7 +37,7 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container">
         <div className="nav-content">
-          <button className="logo" onClick={scrollToTop} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
+          <button className="logo logo-btn" onClick={scrollToTop} aria-label="Go to top">
             <span className="logo-icon">🧩</span>
             <span className="logo-text">Puzzle-Flow</span>
           </button>

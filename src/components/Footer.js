@@ -25,7 +25,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-brand">
-            <button className="logo" onClick={scrollToTop} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
+            <button className="logo logo-btn" onClick={scrollToTop} aria-label="Go to top">
               <span className="logo-icon">🧩</span>
               <span className="logo-text">Puzzle-Flow</span>
             </button>
@@ -40,23 +40,23 @@ const Footer = () => {
             </div>
             <div className="footer-column">
               <h4>Entreprise</h4>
-              <button className="footer-link-btn">À propos</button>
-              <button className="footer-link-btn">Carrières</button>
-              <button className="footer-link-btn">Contact</button>
+              <a href="/about">À propos</a>
+              <a href="/careers">Carrières</a>
+              <a href="#contact" onClick={(e) => handleNavClick(e, '#contact')}>Contact</a>
             </div>
             <div className="footer-column">
               <h4>Ressources</h4>
-              <button className="footer-link-btn">Documentation</button>
-              <button className="footer-link-btn">Blog</button>
-              <button className="footer-link-btn">Support</button>
+              <a href="/docs">Documentation</a>
+              <a href="/blog">Blog</a>
+              <a href="/support">Support</a>
             </div>
           </div>
         </div>
         <div className="footer-bottom">
           <p>&copy; 2024 Puzzle-Flow. Tous droits réservés.</p>
           <div className="footer-legal">
-            <button className="footer-link-btn">Politique de confidentialité</button>
-            <button className="footer-link-btn">Conditions d'utilisation</button>
+            <a href="/privacy">Politique de confidentialité</a>
+            <a href="/terms">Conditions d'utilisation</a>
           </div>
         </div>
       </div>

@@ -58,8 +58,8 @@ const Benefits = () => {
               {benefitsData.map((benefit, index) => (
                 <li 
                   key={index}
+                  className={`animation-delay-${index}`}
                   ref={el => itemsRef.current[index] = el}
-                  style={{ transitionDelay: `${index * 0.1}s` }}
                 >
                   <span className="benefit-icon">{benefit.icon}</span>
                   <div>

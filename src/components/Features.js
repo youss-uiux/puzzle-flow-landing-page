@@ -69,9 +69,8 @@ const Features = () => {
           {featuresData.map((feature, index) => (
             <div 
               key={index} 
-              className="feature-card"
+              className={`feature-card animation-delay-${index}`}
               ref={el => cardsRef.current[index] = el}
-              style={{ transitionDelay: `${index * 0.1}s` }}
             >
               <div className="feature-icon">{feature.icon}</div>
               <h3>{feature.title}</h3>

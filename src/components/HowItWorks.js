@@ -54,9 +54,8 @@ const HowItWorks = () => {
           {stepsData.map((step, index) => (
             <React.Fragment key={index}>
               <div 
-                className="step"
+                className={`step animation-delay-${index * 2}`}
                 ref={el => stepsRef.current[index] = el}
-                style={{ transitionDelay: `${index * 0.2}s` }}
               >
                 <div className="step-number">{step.number}</div>
                 <div className="step-content">
