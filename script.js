@@ -1,3 +1,10 @@
+// Helper function to escape HTML (defined globally for reuse)
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -38,54 +45,36 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Reusable form submission handler
+    function handleFormSubmit(e) {
+        e.preventDefault();
+        const form = e.target;
+        const emailInput = form.querySelector('#email');
+        const email = emailInput.value;
+        
+        if (email) {
+            // Show success message
+            const formGroup = form.querySelector('.form-group');
+            const originalContent = formGroup.innerHTML;
+            
+            formGroup.innerHTML = '<p style="color: #10b981; font-size: 1.125rem; padding: 1rem;">✓ Merci ! Nous vous contactons bientôt à ' + escapeHtml(email) + '</p>';
+            
+            // Reset form after 5 seconds
+            setTimeout(() => {
+                formGroup.innerHTML = originalContent;
+                // Re-attach event listener since we replaced the content
+                const newForm = document.getElementById('contactForm');
+                if (newForm) {
+                    newForm.addEventListener('submit', handleFormSubmit);
+                }
+            }, 5000);
+        }
+    }
+
     // Form submission handling
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const emailInput = document.getElementById('email');
-            const email = emailInput.value;
-            
-            if (email) {
-                // Show success message
-                const formGroup = contactForm.querySelector('.form-group');
-                const originalContent = formGroup.innerHTML;
-                
-                formGroup.innerHTML = '<p style="color: #10b981; font-size: 1.125rem; padding: 1rem;">✓ Merci ! Nous vous contacterons bientôt à ' + escapeHtml(email) + '</p>';
-                
-                // Reset form after 3 seconds
-                setTimeout(() => {
-                    formGroup.innerHTML = originalContent;
-                    emailInput.value = '';
-                    // Re-attach event listener since we replaced the content
-                    attachFormSubmit();
-                }, 5000);
-            }
-        });
-    }
-
-    // Helper function to escape HTML
-    function escapeHtml(text) {
-        const div = document.createElement('div');
-        div.textContent = text;
-        return div.innerHTML;
-    }
-
-    // Function to re-attach form submit handler
-    function attachFormSubmit() {
-        const newForm = document.getElementById('contactForm');
-        if (newForm) {
-            newForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const emailInput = document.getElementById('email');
-                const email = emailInput.value;
-                
-                if (email) {
-                    const formGroup = newForm.querySelector('.form-group');
-                    formGroup.innerHTML = '<p style="color: #10b981; font-size: 1.125rem; padding: 1rem;">✓ Merci ! Nous vous contacterons bientôt à ' + escapeHtml(email) + '</p>';
-                }
-            });
-        }
+        contactForm.addEventListener('submit', handleFormSubmit);
     }
 
     // Navbar scroll effect
