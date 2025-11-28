@@ -1,13 +1,22 @@
 import { motion } from 'framer-motion';
+import Orb from './Orb';
 
 function Hero() {
   return (
     <section className="relative pt-36 pb-24 overflow-hidden min-h-screen flex items-center">
-      {/* Background */}
+      {/* Background avec Orb */}
       <div className="absolute inset-0 z-0 overflow-hidden">
+        <div style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0 }}>
+          <Orb
+            hoverIntensity={0.5}
+            rotateOnHover={true}
+            hue={240}
+            forceHoverState={false}
+          />
+        </div>
         <div className="absolute -top-1/2 -right-1/5 w-4/5 h-[150%] bg-gradient-radial from-indigo-500/8 to-transparent"></div>
         <div
-          className="absolute inset-0 opacity-30"
+          className="absolute inset-0 opacity-20"
           style={{
             backgroundImage: `linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px)`,
             backgroundSize: '50px 50px'
