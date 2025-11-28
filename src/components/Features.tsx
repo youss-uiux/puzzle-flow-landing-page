@@ -1,5 +1,3 @@
-import './Features.css';
-
 const features = [
   {
     icon: (
@@ -67,23 +65,26 @@ const features = [
 
 function Features() {
   return (
-    <section className="features section" id="features">
-      <div className="container">
-        <h2 className="section-title">
-          Tout ce dont vous avez besoin pour <span className="gradient-text">maîtriser vos workflows</span>
+    <section className="py-24 bg-gray-50" id="features">
+      <div className="max-w-7xl mx-auto px-6">
+        <h2 className="text-4xl font-extrabold text-center mb-4 text-gray-900">
+          Tout ce dont vous avez besoin pour <span className="bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">maîtriser vos workflows</span>
         </h2>
-        <p className="section-subtitle">
+        <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-16">
           Des fonctionnalités puissantes conçues pour simplifier vos processus internes et améliorer la collaboration de votre équipe.
         </p>
-        
-        <div className="features-grid">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div className="feature-card" key={index}>
-              <div className="feature-icon">
+            <div
+              key={index}
+              className="bg-white p-8 rounded-3xl border border-gray-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-indigo-200 group"
+            >
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-2xl text-indigo-600 mb-5 group-hover:scale-110 transition-transform">
                 {feature.icon}
               </div>
-              <h3 className="feature-title">{feature.title}</h3>
-              <p className="feature-description">{feature.description}</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
+              <p className="text-base text-gray-600 leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>
@@ -93,3 +94,4 @@ function Features() {
 }
 
 export default Features;
+
