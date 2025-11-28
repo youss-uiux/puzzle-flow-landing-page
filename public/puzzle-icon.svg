@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <rect width="100" height="100" rx="20" fill="url(#gradient)"/>
+  <path d="M30 35 L30 25 C30 22 33 20 35 20 C37 20 40 22 40 25 L40 35 L50 35 L50 40 C47 40 45 43 45 45 C45 47 47 50 50 50 L50 55 L40 55 L40 65 C40 68 37 70 35 70 C33 70 30 68 30 65 L30 55 L25 55 L25 45 C22 45 20 42 20 40 C20 38 22 35 25 35 L30 35 Z" fill="white" opacity="0.9"/>
+  <path d="M60 35 L60 25 C60 22 63 20 65 20 C67 20 70 22 70 25 L70 35 L80 35 L80 40 C77 40 75 43 75 45 C75 47 77 50 80 50 L80 55 L70 55 L70 65 C70 68 67 70 65 70 C63 70 60 68 60 65 L60 55 L50 55 L50 50 C53 50 55 47 55 45 C55 43 53 40 50 40 L50 35 L60 35 Z" fill="white" opacity="0.7"/>
+  <path d="M30 65 L30 75 C30 78 33 80 35 80 C37 80 40 78 40 75 L40 65 L50 65 L50 60 C47 60 45 57 45 55 C45 57 47 60 50 60 L50 65 L60 65 L60 75 C60 78 63 80 65 80 C67 80 70 78 70 75 L70 65 L80 65 L80 80 L20 80 L20 65 L25 65 L25 55 L30 55 L30 65 Z" fill="white" opacity="0.5"/>
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+  </defs>
+</svg>
